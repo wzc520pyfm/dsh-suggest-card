@@ -1,0 +1,59 @@
+{
+  "name": "dsh-suggest-card",
+  "version": "0.1.0",
+  "description": "DSH Web plugin: a dismissible wrap-up card under a substantial turn, with a model-chosen next step.",
+  "type": "module",
+  "main": "./lib/index.js",
+  "exports": {
+    ".": "./lib/index.js",
+    "./client": "./lib/client.js",
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "lib",
+    "cordis.patch.yml",
+    "icon.svg",
+    "skills",
+    "README.md",
+    "LICENSE"
+  ],
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    },
+    "client": {
+      "platform": "web",
+      "inject": [
+        "@deepseek-ai/dsh-client-ui-chat",
+        "@deepseek-ai/dsh-client-ui-sidebar-right"
+      ]
+    }
+  },
+  "scripts": {
+    "build": "node scripts/build.mjs",
+    "typecheck": "tsc --noEmit",
+    "test": "node --experimental-strip-types --test tests/*.test.ts",
+    "prepare": "node scripts/build.mjs"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/wzc520pyfm/dsh-suggest-card.git"
+  },
+  "homepage": "https://github.com/wzc520pyfm/dsh-suggest-card#readme",
+  "bugs": {
+    "url": "https://github.com/wzc520pyfm/dsh-suggest-card/issues"
+  },
+  "license": "MIT",
+  "engines": {
+    "node": ">=22.19.0"
+  },
+  "devDependencies": {
+    "@types/node": "^22.19.0",
+    "@types/react": "^18.3.18",
+    "@types/react-dom": "^18.3.5",
+    "esbuild": "^0.25.11",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "typescript": "^5.9.3"
+  }
+}
