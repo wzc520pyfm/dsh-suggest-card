@@ -1,0 +1,4 @@
+# Register the wrap-up suggest card plugin in the active DSH profile.
+- insert:
+    - id: dsh-suggest-card
+      name: dsh-suggest-card
