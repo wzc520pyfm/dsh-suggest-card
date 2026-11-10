@@ -1,0 +1,7 @@
+.superpowers/
+.npmrc
+node_modules/
+dist/
+coverage/
+*.tgz
+lib/
